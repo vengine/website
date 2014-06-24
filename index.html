@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <meta name="description" content="Vengine.github.io : 7Zip Browser" />
+        <link href="http://inc.tgbusdata.cn/common/css/v2.css" rel="stylesheet" type="text/css" />
+        <link href="http://psv.tgbus.com/css/style_n24.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        <script language="JavaScript" type="text/javascript" src="http://psv.tgbus.com/js/tab.js"></script>
+        <script type="text/javascript" src="http://inc.tgbusdata.cn/common/javascript/jquery.js"></script>
+        <script type="text/javascript" src="http://inc.tgbusdata.cn/common/javascript/utility.js"></script>
+        <script type="text/javascript" src="http://vista.tgbusdata.cn/s.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                              var currentIndex = 0;
+                              function setFoucs() {
+                              currentIndex = currentIndex >= 6 ? 0 : currentIndex;
+                              $("#chpict li").removeClass("current").eq(currentIndex).addClass("current");
+                              $("#chpictxt li").hide().eq(currentIndex).fadeIn("slow");
+                              }
+                              $("#chpict li").hover(function() {
+                                                    clearTimeout(DEMO);
+                                                    currentIndex = $("#chpict li").index(this);
+                                                    setFoucs();
+                                                    
+                                                    }, function() {
+                                                    DEMO = setTimeout(autoScroll, 3000);
+                                                    });
+                              $("#chpictxt li").hover(function() {
+                                                      clearTimeout(DEMO);
+                                                      
+                                                      }, function() {
+                                                      DEMO = setTimeout(autoScroll, 3000);
+                                                      });
+                              function autoScroll() {
+                              currentIndex++;
+                              setFoucs();
+                              DEMO = setTimeout(autoScroll, 3000);
+                              }
+                              function StopScrolll() {
+                              clearTimeout(DEMO);
+                              }
+                              DEMO = setTimeout(autoScroll, 3000);
+                              });
+        </script>
+        <script>
+                $(function() {
+                  $(".pmenu li").mouseover(function() {
+                                           $(this).siblings().removeClass("active")
+                                           $(this).addClass("active")
+                                           
+                                           $target = $(this).parents(".panel").find("#div1_" + $(this).attr("id"))
+                                           
+                                           
+                                           $target.siblings().hide()
+                                           $target.show()
+                                           })
+                  })
+        </script>
+        <title>Vengine.github.io</title>
+    </head>
+    <body>
+        
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+                <a id="forkme_banner" href="https://github.com/vengine">View on GitHub</a>
+                
+                <h1 id="project_title">Vengine.github.io</h1>
+                <h2 id="project_tagline">7Zip Browser</h2>
+                
+            </header>
+        </div>
+        <div id="tgbus_top" style="width: 970px; margin: auto">
+            
+            <div class="chpicbody">
+                <div class="chpictxt" id="chpictxt">
+                    <ul>
+                        <li class="hide"><a href="http://psv.tgbus.com/yxgl/201406/20140620100348.shtml"><img class='pic1' src='http://tv01.tgbusdata.cn/v2/thumb/jpg/MUVDOCwwLDI0MCw5LDMsMSwtMSwwLHJrNTAsNjEuMTUyLjI0Mi4x/u/psv.tgbus.com/UploadFiles_5352/201406/2014062311275548.jpg'  height='240' border='0'></a><div class="chpicright"><p class="chpict1"><a href="http://psv.tgbus.com/yxgl/201406/20140620100348.shtml">《萤火虫日记》攻略更新完结&nbsp;穿梭于光影世界</a></p><p class="chpict2">&nbsp;日本一制作的PSV动作游戏《萤火虫日记》已于昨天发售。本作中玩家要通过光与影两个萤火虫来引导少女从废墟中逃脱。而废墟中存在着各种各样的机关，稍微不注意就可能让少女死掉。</p><p class="chpict3"></p></div></li>
+                        <li class="hide"><a href="http://psv.tgbus.com/news/video/201406/20140620132645.shtml"><img class='pic1' src='http://tv02.tgbusdata.cn/v2/thumb/jpg/OTQ4MywwLDI0MCw5LDMsMSwtMSwwLHJrNTAsNjEuMTUyLjI0Mi4x/u/psv.tgbus.com/UploadFiles_5352/201406/2014062013325778.jpg'  height='240' border='0'></a><div class="chpicright"><p class="chpict1"><a href="http://psv.tgbus.com/news/video/201406/20140620132645.shtml">《怪物猎人：边境G》PSV版触摸操作演示视频</a></p><p class="chpict2">CAPCOM预计于8月13日开始运营PSV版的《怪物猎人：边境G》公开了一段演示PSV版触摸操作的视频，这也是PSV版有别于其它版本的特色之一。通过触摸操作玩家可以方便地进行聊天、地图放缩及使用道具。</p><p class="chpict3"></p></div></li>
+                        <li class="hide"><a href="http://psv.tgbus.com/pingce/201406/20140620090850.shtml"><img class='pic1' src='http://tv03.tgbusdata.cn/v2/thumb/jpg/MzQwNiwwLDI0MCw5LDMsMSwtMSwwLHJrNTAsNjEuMTUyLjI0Mi4x/u/psv.tgbus.com/UploadFiles_5352/201406/2014062010342649.jpg'  height='240' border='0'></a><div class="chpicright"><p class="chpict1"><a href="http://psv.tgbus.com/pingce/201406/20140620090850.shtml">《炼金术士工作室》系列回顾&nbsp;全作品魅力展现</a></p><p class="chpict2">《炼金术士工作室》系列从初代1997年发售至今也有17年了，如今的工作室系列又以极其精美的动画渲染力和清新可爱的人设博得很多玩家们的喜爱。再过不久最新作《夏莉的工作室》就要发售了，那么下面就将系列之前的作品做一个完整的汇总，即使你没有玩过工作室系列也可以了解一下，感受活用炼金术致富的强大魅力！</p><p class="chpict3"></p></div></li>
+                        <li class="hide"><a href="http://psv.tgbus.com/news/game/201406/20140619095539.shtml"><img class='pic1' src='http://tv04.tgbusdata.cn/v2/thumb/jpg/QUI2MywwLDI0MCw5LDMsMSwtMSwwLHJrNTAsNjEuMTUyLjI0Mi4x/u/psv.tgbus.com/UploadFiles_5352/201406/2014061916323796.jpg'  height='240' border='0'></a><div class="chpicright"><p class="chpict1"><a href="http://psv.tgbus.com/news/game/201406/20140619095539.shtml">《讨鬼传：极》新鬼风缝与紧急/无限讨伐任务</a></p><p class="chpict2">KOEI TECMO预定于8月28日发售的PSP/PSV双平台共斗游戏《讨鬼传 极》本次为大家带来了最新的游戏情报。其中最引人注目的就是新鬼“风缝”的登场，这是一只像猫一样的鬼，虽然看上去有点可爱，但其体型庞大，性格残忍且狡猾。</p><p class="chpict3"></p></div></li>
+                        <li class="hide"><a href="http://psv.tgbus.com/news/game/201406/20140619093614.shtml"><img class='pic1' src='http://tv05.tgbusdata.cn/v2/thumb/jpg/RTI4MCwwLDI0MCw5LDMsMSwtMSwwLHJrNTAsNjEuMTUyLjI0Mi4x/u/psv.tgbus.com/UploadFiles_5352/201406/2014061913331031.jpg'  height='240' border='0'></a><div class="chpicright"><p class="chpict1"><a href="http://psv.tgbus.com/news/game/201406/20140619093614.shtml">《迷宫旅人2》PSV版详情公开&nbsp;画面高清福利多</a></p><p class="chpict2">AQUAPLUS预定于9月25日发售的PSV迷宫RPG《迷宫旅人2：王立图书馆和魔物封印》在本周的Fami通杂志中公开了游戏的详细情报。本作为2013年在PSP平台发售的同名游戏的强化移植版，游戏的画面进行了高清化，而3D地图则是完全重制。</p><p class="chpict3"></p></div></li>
+                        <li class="hide"><a href="http://bills.tgbus.com/click/aid/69614"><img class='pic1' src='http://tv06.tgbusdata.cn/v2/thumb/jpg/MjkwMiwwLDI0MCw5LDMsMSwtMSwwLHJrNTAsNjEuMTUyLjI0Mi4x/u/psv.tgbus.com/UploadFiles_5352/201403/2014032817512399.jpg'  height='240' border='0'></a><div class="chpicright"><p class="chpict1"><a href="http://bills.tgbus.com/click/aid/69614">电玩巴士商城“踏青季”清新来袭</a></p><p class="chpict2">慵懒了一个冬！你还要宅在家？电玩巴士商城“踏青季”清新来袭，智能穿戴设备全新上架，UP手环陪你一起掌控健康生活，立刻充满活力。更有主机清凉优惠陪你拥抱春日！点击了解详情。</p><p class="chpict3"></p></div></li>
+                    </ul>
+                </div>
+                            
+                <script type="text/javascript">$("#chpictxt li").eq(0).show();</script>
+                <div id="chpict">
+                    <ul>
+                        <li><a href="http://psv.tgbus.com/yxgl/201406/20140620100348.shtml">《萤火虫日记》攻略</a></li>
+                        <li><a href="http://psv.tgbus.com/news/video/201406/20140620132645.shtml">MHFG触摸演示</a></li>
+                        <li><a href="http://psv.tgbus.com/pingce/201406/20140620090850.shtml">《工作室》系列回顾</a></li>
+                        <li><a href="http://psv.tgbus.com/news/game/201406/20140619095539.shtml">《讨鬼传：极》</a></li>
+                        <li><a href="http://psv.tgbus.com/news/game/201406/20140619093614.shtml">《迷宫旅人2》PSV版详情</a></li>
+                        <li><a href="http://bills.tgbus.com/click/aid/69614">巴士商城</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
