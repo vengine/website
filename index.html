@@ -70,9 +70,60 @@
                                            })
                   })
         </script>
-        <title>Vengine.github.io</title>
-    </head>
-    <body>
+        <script>
+            function classMap() {
+                
+                this.map = new Array();
+                
+                var struct = function(key, value){
+                    this.key = key;
+                    this.value = value;
+                };
+                
+                this.find = function (key){
+                    for (var i = 0; i < this.map.length; i++)
+                    {
+                        if ( this.map[i].key === key )
+                        {
+                            return this.map[i].value;
+                        }
+                    }
+                    return null;
+                };
+                
+                this.set = function (key, value){
+                    for (var i = 0; i < this.map.length; i++)
+                    {
+                        if ( this.map[i].key === key )
+                        {
+                            this.map[i].value = value;
+                            return;
+                        }
+                    }
+                    this.map.push(new struct(key,value));
+                };
+                
+                this.remove = function (key){
+                    var v;
+                    for (var i = 0; i < this.map.length; i++)
+                    {
+                        v = this.map.pop();
+                        if ( v.key === key )
+                        continue;
+                        
+                        this.map.unshift(v);
+                    }
+                };
+                
+                this.count = function(){
+                    return this.map.length;
+                };
+                
+                this.empty = function(){
+                    return this.map.length == 0;
+                };
+            }
+        </script>
         <script type="text/javascript">
             var lang = "";
             var Browser_Agent = navigator.userAgent;
@@ -88,8 +139,27 @@
                 document.write("Language=" + b);
                 lang = b;
             }
-        
         </script>
+        
+        <script type="text/javascript">
+            var localizable;
+            function getLocalizableString(key) {
+                if (localizable == null) {
+                    localizable = new classMap();
+                    $.ajaxSettings.async = false;
+                    $.getJSON("jsons/localizable.json",function(result){
+                              $.each(result, function(key, value){
+                                     localizable.set(key, value);
+                                     });
+                              });
+                    $.ajaxSettings.async = true;
+                }
+                return localizable.find(key);
+            }
+            </script>
+        <title>Vengine.github.io</title>
+    </head>
+    <body>
         
         <div id="header_wrap" class="outer">
             <header class="inner">
@@ -164,19 +234,19 @@
                     <ul>
                         <li>
                             <a href="http://vengine.github.io/7zMaster/">
-                                <script>document.write(lang);
+                                <script>document.write(getLocalizableString("WINDOW_TITLE_0"));
                                 </script>
                             </a>
                         </li>
                         <li>
                             <a href="http://vengine.guthub.io/XDuplicateFileCleaner/">
-                                <script>document.write("abc");
+                                <script>document.write(getLocalizableString("WINDOW_TITLE_1"));
                                 </script>
                             </a>
                         </li>
                         <li>
                             <a href="http://vengine.github.io/7ZipBrowser/">
-                                <script>document.write("abc");
+                                <script>document.write(getLocalizableString("WINDOW_TITLE_2"));
                                 </script>
                             </a>
                         </li>
