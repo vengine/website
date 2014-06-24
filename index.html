@@ -61,6 +61,21 @@
         <title>Vengine.github.io</title>
     </head>
     <body>
+        <script type="text/javascript">
+            
+            var Browser_Agent = navigator.userAgent;
+            if (Browser_Agent.indexOf("MSIE") != -1){
+                /// 判断浏览器是否为ie
+                var a = navigator.browserLanguage;
+                document.write("BrowserLanguage=" + a);
+            }
+            else {
+                /// firefox opera safari
+                var b = navigator.language;
+                document.write("Language=" + b);
+            }
+        
+        </script>
         
         <div id="header_wrap" class="outer">
             <header class="inner">
@@ -99,6 +114,7 @@
             </div>
             
         </div>
+        
         <!-- 百度分享 开始了 -->
         <script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=6&amp;pos=right&amp;uid=6644429" ></script>
         <script type="text/javascript" id="bdshell_js"></script>
