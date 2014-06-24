@@ -4,13 +4,13 @@
         <meta charset='utf-8' />
         <meta http-equiv="X-UA-Compatible" content="chrome=1" />
         <meta name="description" content="Vengine.github.io : 7Zip Browser" />
-        <link href="http://inc.tgbusdata.cn/common/css/v2.css" rel="stylesheet" type="text/css" />
-        <link href="http://psv.tgbus.com/css/style_n24.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/v2.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/style_n24.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-        <script language="JavaScript" type="text/javascript" src="http://psv.tgbus.com/js/tab.js"></script>
-        <script type="text/javascript" src="http://inc.tgbusdata.cn/common/javascript/jquery.js"></script>
-        <script type="text/javascript" src="http://inc.tgbusdata.cn/common/javascript/utility.js"></script>
-        <script type="text/javascript" src="http://vista.tgbusdata.cn/s.js"></script>
+        <script language="JavaScript" type="text/javascript" src="javascripts/tab.js"></script>
+        <script type="text/javascript" src="javascripts/jquery.js"></script>
+        <script type="text/javascript" src="javascripts/utility.js"></script>
+        <script type="text/javascript" src="javascripts/s.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                               var currentIndex = 0;
@@ -62,17 +62,19 @@
     </head>
     <body>
         <script type="text/javascript">
-            
+            var lang = "";
             var Browser_Agent = navigator.userAgent;
             if (Browser_Agent.indexOf("MSIE") != -1){
                 /// 判断浏览器是否为ie
                 var a = navigator.browserLanguage;
                 document.write("BrowserLanguage=" + a);
+                lang = a;
             }
             else {
                 /// firefox opera safari
                 var b = navigator.language;
                 document.write("Language=" + b);
+                lang = b;
             }
         
         </script>
@@ -100,7 +102,7 @@
                 <script type="text/javascript">$("#chpictxt li").eq(0).show();</script>
                 <div id="chpict">
                     <ul>
-                        <li><a href="http://vengine.github.io/7zMaster/"><script>document.write("abc");</script></a></li>
+                        <li><a href="http://vengine.github.io/7zMaster/"><script>document.write(lang);</script></a></li>
                         <li><a href="http://vengine.guthub.io/XDuplicateFileCleaner/"><script>document.write("abc");</script></a></li>
                         <li><a href="http://vengine.github.io/7ZipBrowser/"><script>document.write("abc");</script></a></li>
                     </ul>
